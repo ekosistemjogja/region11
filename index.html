@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DASHBOARD DATA MBAM</title>
-  <link rel="icon" href="https://logotyp.us/file/bri.svg" type="image/svg+xml" />
+  <title>DATA EKOSISTEM JOGJA</title>
+  <link rel="icon" href="https://img.icons8.com/color/96/nature.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -12,10 +12,9 @@
       font-family: 'Poppins', Arial, sans-serif;
       text-align: center;
       padding: 20px;
-      background: linear-gradient(135deg, #f0f8ff, #d1e7ff);
+      background: linear-gradient(135deg, #e0f7ef, #c6f1ff);
       min-height: 100vh;
-      position: relative;
-      color: #333;
+      color: #2f4f4f;
     }
     .container {
       max-width: 600px;
@@ -24,8 +23,6 @@
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-      position: relative;
-      z-index: 1;
     }
     .button {
       display: inline-block;
@@ -33,32 +30,39 @@
       padding: 12px 24px;
       font-size: 16px;
       color: white;
-      background-color: #0056b3;
+      background-color: #007a5e;
       text-decoration: none;
       border-radius: 5px;
       transition: background 0.3s ease, transform 0.2s ease;
     }
     .button:hover {
-      background-color: #004090;
+      background-color: #005f47;
       transform: scale(1.05);
     }
     .footer {
       margin-top: 20px;
       font-size: 14px;
-      color: red;
+      color: #b22222;
       font-weight: bold;
     }
   </style>
+  <script>
+    var password = prompt("Masukkan password untuk mengakses halaman:");
+    if (password !== "ekosistemjogja") {
+      document.write("<h2 style='text-align:center; color:red; margin-top:100px;'>Akses ditolak. Password salah.</h2>");
+      document.body.style.display = "none";
+    }
+  </script>
 </head>
 <body>
   <div class="container">
-    <img src="https://logotyp.us/file/bri.svg" alt="Logo BRI" width="120" />
-    <h1>DASHBOARD DATA MBAM</h1>
+    <img src="https://img.icons8.com/color/96/nature.png" alt="Logo Ekosistem Jogja" width="100" />
+    <h1>DATA EKOSISTEM JOGJA</h1>
     <p>Silakan akses data melalui tautan berikut:</p>
     <a class="button" href="https://drive.google.com/drive/folders/1SmiDuvWf01-nVtwXdQ75fn3oMQFLCC7x?usp=sharing" target="_blank">
-      <i class="fas fa-folder-open"></i> Akses Data MBAM
+      <i class="fas fa-folder-open"></i> Akses Data Ekosistem
     </a>
-    <p class="footer">⚠️ Data bersifat internal, mohon tidak disebarluaskan.</p>
+    <p class="footer">⚠️ Data bersifat internal — harap digunakan dengan bijak.</p>
   </div>
 </body>
 </html>
