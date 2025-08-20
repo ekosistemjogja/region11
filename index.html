@@ -48,20 +48,39 @@
   </style>
   <script>
     var password = prompt("Masukkan password untuk mengakses halaman:");
-    if (password !== "ekosistemjogja") {
+    var content = "";
+
+    if (password === "ekosistemjogja") {
+      content = `
+        <p>Silakan akses data melalui tautan berikut:</p>
+        <a class="button" href="https://drive.google.com/drive/folders/1SmiDuvWf01-nVtwXdQ75fn3oMQFLCC7x?usp=sharing" target="_blank">
+          <i class="fas fa-folder-open"></i> Akses Data Ekosistem
+        </a>
+      `;
+    } else if (password === "ekosistem2025") {
+      content = `
+        <p>Silakan akses data tambahan melalui tautan berikut:</p>
+        <a class="button" href="https://drive.google.com/drive/folders/1cWDZbud-mRDZ8WQDPx9rU4ooj85lG537?usp=sharing" target="_blank">
+          <i class="fas fa-database"></i> Akses Data Ekosistem 2025
+        </a>
+      `;
+    } else {
       document.write("<h2 style='text-align:center; color:red; margin-top:100px;'>Akses ditolak. Password salah.</h2>");
       document.body.style.display = "none";
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      if (content !== "") {
+        document.getElementById("content").innerHTML = content;
+      }
+    });
   </script>
 </head>
 <body>
   <div class="container">
     <img src="https://img.icons8.com/color/96/nature.png" alt="Logo Ekosistem Jogja" width="100" />
     <h1>DATA EKOSISTEM JOGJA</h1>
-    <p>Silakan akses data melalui tautan berikut:</p>
-    <a class="button" href="https://drive.google.com/drive/folders/1SmiDuvWf01-nVtwXdQ75fn3oMQFLCC7x?usp=sharing" target="_blank">
-      <i class="fas fa-folder-open"></i> Akses Data Ekosistem
-    </a>
+    <div id="content"></div>
     <p class="footer">⚠️ Data bersifat internal — harap digunakan dengan bijak.</p>
   </div>
 </body>
